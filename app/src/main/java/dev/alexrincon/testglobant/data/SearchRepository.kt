@@ -3,8 +3,9 @@ package dev.alexrincon.testglobant.data
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import javax.inject.Inject
 
-class SearchRepository {
+class SearchRepository @Inject constructor() {
 
     fun search(query: String): Flow<List<String>> = flow {
         delay(500) // Simulate network delay
